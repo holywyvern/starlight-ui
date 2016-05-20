@@ -1,0 +1,20 @@
+{
+  "name": "starlight-ui",
+  "description": "An ui for webkit components in html5",
+  "main": "index.js",
+  "authors": [
+    "Ramiro Rojo <ramiro.rojo.cretta@gmail.com>"
+  ],
+  "license": "Apache-2.0",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "components-font-awesome": "^4.6.1"
+  }
+}

@@ -1,0 +1,31 @@
+form {
+  
+  display: table;
+  border-collapse: separate;
+  border-spacing: 2px;
+  max-width: 100%;
+  
+  &>.group {
+    display: table-row;
+    vertical-align: top;
+        
+    &>label {
+      vertical-align: top;
+		  display: table-cell;
+      line-height: calc(1em + 10px);
+      font-weight: bold;
+    }    
+    
+    &>.control, &>.radio, &>.checkbox {
+      vertical-align: top;
+      display: table-cell;
+      padding-left: 10px;
+      &>input:not([type='radio']):not([type='checkbox']), &>textarea {
+        width: 100%;
+      }
+      
+    }
+    
+  }
+  
+}

@@ -1,0 +1,35 @@
+details {
+ 
+  border: 2px solid $dark-border-color;
+  border-radius: 10px;
+  box-shadow: $shadow-color 0 0 .25em;
+ 
+  &>summary {
+     color: $dark-font-color;
+     background: linear-gradient($dark-bg-color, darken($dark-bg-color, 3%));
+     padding: 10px;
+     border-radius: 10px;
+     
+     &:focus {
+      outline: 0; 
+     }
+   
+    &:hover {
+      cursor: pointer;
+    }
+   
+  }
+  
+  &[open]>summary {
+    border-radius: 10px 10px 0 0;
+    border-bottom: 2px solid $dark-border-color;
+  }   
+  
+  &>div {
+    background: linear-gradient($light-bg-color, darken($light-bg-color, 3%));
+    padding: 10px;
+    
+    border-radius: 0 0 10px 10px;
+  } 
+  
+}

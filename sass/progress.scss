@@ -1,0 +1,55 @@
+progress {
+	width: 100%;
+	height: 24px;
+	margin: 20px auto;
+	display: block;
+	-webkit-appearance: none;
+	border: none;
+}
+
+progress::-webkit-progress-bar {
+	background: $dark-bg-color;
+	border-radius: 50px;
+	padding: 2px;
+	box-shadow: 0 1px 0px 0 $shadow-color;
+}
+
+/* Now the value part */
+progress::-webkit-progress-value {
+	border-radius: 50px;
+	box-shadow: inset 0 1px 1px 0 $shadow-color;
+	background: darken($dark-bg-color, 30%);
+}
+
+progress:not([value]) {
+  position: relative;
+  
+  &:after {
+    border-radius: 50px;
+    content: "";
+    width: 32px;
+    height: 20px;
+    display: block;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    animation: progress-bar-undetermined-animation 5s infinite;
+    animation-timing-function: linear;
+	  box-shadow: inset 0 1px 1px 0 $shadow-color;
+    background: darken($dark-bg-color, 30%);
+    }
+    background-size: 300em;
+}
+
+@keyframes progress-bar-undetermined-animation
+{
+  0% {
+    left: 2px;
+  }
+  50% {
+    left: calc(100% - 34px);
+  }
+  100% {
+    left: 2px;
+  }
+}

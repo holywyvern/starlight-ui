@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <title>UI Demo</title>    
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu+Mono' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="dist/css/ui.min.css">
+    <link rel="stylesheet" href="bower_components/components-font-awesome/css/font-awesome.css">
+  </head>
+  <body>
+    <dialog id="test-dialog">
+      <header>
+        <h3>Header</h3> 
+        <div class="button-group">
+          <button onclick="document.getElementById('test-dialog').close()" class="danger">
+            <i class="fa fa-times"></i>
+          </button>
+        </div>
+      </header>
+      <div class="body">
+        Some content
+      </div>
+      <footer>
+        <h3>Footer</h3> 
+      </footer>
+    </dialog>
+    <div class="window">
+      <header>
+        <div class="top">
+          <h1>Title</h1>
+          <div class="button-group">
+            <a href="#" class="button"><i class="fa fa-fw fa-minus fa-fw"></i></a>
+            <a href="#" class="button"><i class="fa fa-fw fa-clone fa-flip-horizontal fa-fw"></i></a>
+            <a href="#" class="button danger"><i class="fa fa-fw fa-times fa-fw"></i></a>
+          </div>
+        </div>
+        <nav class="menu">
+          <ul>
+            <li tabindex="0"><a href="#">Menu 1</a></li>
+            <li tabindex="1">
+              <a href="#">Menu 2 <span class="caret"></span></a>
+              <ul>
+                <li tabindex="7"><a href="#">Sub Menu 1</a></li>
+                <li tabindex="8">
+                  <a href="#">Sub Menu 2 <span class="caret"></span></a>
+                  <ul>
+                    <li><a href="#">Sub Menu 1</a></li>
+                    <li><a href="#">Sub Menu 2</a></li>
+                    <li><a href="#">Sub Menu 3</a></li>
+                    <li><span class="divider"></span></li>
+                    <li><a href="#">Sub Menu 4</a></li>
+                  </ul>                  
+                </li>
+                <li tabindex="2"><a href="#">Sub Menu 3</a></li>
+                <li><span class="divider"></span></li>
+                <li tabindex="3"><a href="#">Sub Menu 4</a></li>
+              </ul>
+            </li>
+            <li tabindex="4"><a href="#">Menu 3</a></li>
+            <li><span class="divider"></span></li>
+            <li tabindex="5"><a href="#">Menu 4</a></li>
+            <li tabindex="6">
+              <a href="#">Menu 5 <span class="caret"></span></a>
+              <ul>
+                <li>
+                  <span class="radio">
+                    <input type="radio" name="menu-radio-1" id="menu-radio-1-1" checked>
+                    <label for="menu-radio-1-1">  
+                      Radio 1
+                    </label>
+                  </span>
+                </li>
+                <li>
+                  <span class="radio">
+                    <input type="radio" name="menu-radio-1" id="menu-radio-1-2">
+                    <label for="menu-radio-1-2">  
+                      Radio 2
+                    </label>
+                  </span>
+                </li>
+                <li>
+                  <span class="radio">
+                    <input type="radio" name="menu-radio-1" id="menu-radio-1-3" disabled>
+                    <label for="menu-radio-1-3">  
+                      Radio 3
+                    </label>
+                  </span>
+                </li>     
+                <li><span class="divider"></span></li>
+                <li>
+                  <span class="radio">
+                    <input type="radio" name="menu-radio-2" id="menu-radio-2-1" disabled>
+                    <label for="menu-radio-2-1">  
+                      Radio 4
+                    </label>
+                  </span>
+                </li>      
+                <li>
+                  <span class="radio">
+                    <input type="radio" name="menu-radio-2" id="menu-radio-2-2" checked disabled>
+                    <label for="menu-radio-2-2">  
+                      Radio 5
+                    </label>
+                  </span>
+                </li>                                       
+                <li><span class="divider"></span></li>
+                <li>
+                  <span class="checkbox">
+                    <input type="checkbox" name="menu-checkbox-1" id="menu-checkbox-1">
+                    <label for="menu-checkbox-1">  
+                      Check 1
+                    </label>
+                  </span>
+                </li>
+                <li>
+                  <span class="checkbox">
+                    <input type="checkbox" name="menu-checkbox-2" id="menu-checkbox-2" checked>
+                    <label for="menu-checkbox-2">  
+                      Check 2
+                    </label>
+                  </span>
+                </li> 
+                <li>
+                  <span class="checkbox">
+                    <input type="checkbox" name="menu-checkbox-3" id="menu-checkbox-3" checked disabled>
+                    <label for="menu-checkbox-3">  
+                      Check 3
+                    </label>
+                  </span>
+                  <span class="checkbox">
+                    <input type="checkbox" name="menu-checkbox-3" id="menu-checkbox-3" disabled>
+                    <label for="menu-checkbox-3">  
+                      Check 4
+                    </label>
+                  </span>                  
+                </li>                               
+              </ul>
+            </li>
+          </ul>
+        </nav>
+      </header>
+      <div class="content">
+        
+        <h1>Typography</h1>
+        <hr>
+        
+        <h2>Headers without subtext</h2>
+        
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h4>Header 4</h4>
+        <h5>Header 5</h5>
+        <h6>Header 6</h6>
+        
+        <h2>Headers with subtext</h2>
+        
+        <h1>Header 1 <small>Secondary</small></h1>
+        <h2>Header 2 <small>Secondary</small></h2>
+        <h3>Header 3 <small>Secondary</small></h3>
+        <h4>Header 4 <small>Secondary</small></h4>
+        <h5>Header 5 <small>Secondary</small></h5>
+        <h6>Header 6 <small>Secondary</small></h6>
+        
+        <h2>Paragraphs</h2>
+        
+        <p>
+          This are some inline control keys: <kbd><kbd>CTRL</kbd> + <kbd>C</kbd></kbd><br>
+          This is some inline <code>&lt;code&gt;Html code&lt;/code&gt;</code>
+        </p>
+        
+        <h2>Code blocks</h2>
+        
+<pre><code>if (items.length > 4) {
+  doSomething(items);
+}</code></pre>
+        
+        <h2>Progress Bars</h2>
+        <h3>Determined</h3>
+        <progress value="70" max="100">70 %</progress>
+        <h3>Undetermined</h3>
+        <progress>Loading...</progress>
+        <h1>Buttons</h1>
+        <hr>
+        <h2>Using Button elements</h2>
+        <button>Normal</button>
+        <button class="success">Success</button>
+        <button class="info">Info</button>
+        <button class="warning">Warning</button>
+        <button class="danger">Danger</button>
+        
+        <h2>Using Anchor elements</h2>
+        
+        <a href="#" class="button">Normal</a>
+        <a href="#" class="button success">Success</a>
+        <a href="#" class="button info">Info</a>
+        <a href="#" class="button warning">Warning</a>
+        <a href="#" class="button danger">Danger</a>        
+        
+        <h2>Available sizes</h2>
+        
+        <button class="lg">Large</button>
+        <button>Normal</button>
+        <button class="sm">Small</button>
+        <button class="xs">Extra Small</button>
+        
+        <h1>Button Groups</h1>
+        <hr>
+       
+        <div class="button-group lg">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+        </div>       
+        
+        <div class="button-group">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+        </div>
+        
+        <div class="button-group sm">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+        </div>        
+        
+        <div class="button-group xs">
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button>4</button>
+        </div>        
+        
+        <h1>Dialogs</h1>
+        <hr>
+        
+        <button onclick="document.getElementById('test-dialog').show()">Show Dialog</button>
+        <button onclick="document.getElementById('test-dialog').showModal()">Show Dialog as Modal</button>
+        
+        <h1>Details</h1>
+        <hr>
+        
+        <details>
+          <summary>Click to show spoiler</summary>
+          <div>Some details</div>
+        </details>
+        
+        <h1>Panels</h1>
+        <hr>
+         
+          <div class="panel">
+            This is a panel
+          </div>
+         
+          <div class="panel success">
+            This is a success panel
+          </div>         
+         
+          <div class="panel info">
+            This is a info panel
+          </div>
+          
+          <div class="panel warning">
+            This is a warning panel
+          </div>
+          
+          <div class="panel danger">
+            This is a danger panel
+          </div>                             
+         
+        <h1>Tabs</h1>
+        <hr>
+        
+        <div class="tab-container">
+          <ul class="header">
+            <li class="active"><a href="#">Page 1</a></li>
+            <li><a href="#">Page 2</a></li>
+          </ul>
+          <div class="body">
+            <div class="active">
+              Tab 1
+            </div>
+            <div>
+              Tab 2
+            </div>
+          </div>        
+        </div>
+        
+        <h1>Forms</h1>
+        <hr>
+        <form action="#">
+          <div class="group">
+            <label>Username</label>
+            <div class="control">
+              <input type="text" />
+            </div>
+          </div>
+          <div class="group">
+            <label>Password</label>
+            <div class="control">
+              <input type="password" />
+            </div>
+          </div>        
+          <div class="group">
+            <label>Email</label>
+            <div class="control">
+              <input type="email" />
+            </div>
+          </div>    
+          <div class="group">
+            <label>Birthday</label>
+            <div class="control">
+              <input type="date" />
+            </div>
+          </div>       
+          <div class="group">
+            <label>Favourite Number</label>
+            <div class="control">
+              <input type="number" />
+            </div>
+          </div>      
+          <div class="group">
+            <label>Favourite Color</label>
+            <div class="control">
+              <input type="color" />
+            </div>
+          </div>    
+          <div class="group">
+            <label>Form Consistency</label>
+            <div class="control">
+              <input type="range" min="0" max="10" />
+            </div>
+          </div>                              
+          <div class="group">
+            <label>Observations</label>
+            <div class="control">
+              <textarea rows="3">This is some text.
+Not much, anyway</textarea>
+            </div>
+          </div>      
+          <div class="group">
+            <div class="control"></div>
+            <div class="checkbox">
+              <input type="checkbox" id="form-checkbox" checked>
+              <label for="form-checkbox">Send Spam?</label> 
+            </div>
+          </div>  
+          <div class="group">
+            <div class="control"></div>
+            <div class="control">
+              <button type="submit">Send</button>
+              <button type="reset">Reset</button>
+            </div>
+          </div>            
+        </form>
+        <h1>Tables</h1>
+        <hr>        
+        <table>
+          <thead>
+            <tr>
+              <th>First</th>
+              <th>Second</th>
+              <th>Third</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>First</td>
+              <td>Second</td>
+              <td>Third</td>
+            </tr>
+            <tr>
+              <td>First</td>
+              <td>Second</td>
+              <td>Third</td>
+            </tr>
+            <tr>
+              <td>First</td>
+              <td>Second</td>
+              <td>Third</td>
+            </tr>                        
+          </tbody>
+          <tfoot>
+            <tr>
+              <th>First</th>
+              <th>Second</th>
+              <th>Third</th>
+            </tr>            
+          </tfoot>
+        </table>
+        <table>
+          <thead>
+            <tr>
+              <th>First</th>
+              <th>Second</th>
+              <th>Third</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>First</td>
+              <td>Second</td>
+              <td>Third</td>
+            </tr>
+            <tr>
+              <td>First</td>
+              <td>Second</td>
+              <td>Third</td>
+            </tr>
+            <tr>
+              <td>First</td>
+              <td>Second</td>
+              <td>Third</td>
+            </tr>                        
+          </tbody>          
+        </table>
+        <table>
+          <tbody>
+            <tr>
+              <td>First</td>
+              <td>Second</td>
+              <td>Third</td>
+            </tr>
+            <tr>
+              <td>First</td>
+              <td>Second</td>
+              <td>Third</td>
+            </tr>
+            <tr>
+              <td>First</td>
+              <td>Second</td>
+              <td>Third</td>
+            </tr>                        
+          </tbody>          
+        </table>
+      </div>
+      <footer>
+        Foot
+      </footer>
+    </div>
+  </body>  
+</html>

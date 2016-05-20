@@ -1,0 +1,33 @@
+$light-font-color: rgb(86, 66, 159);
+$dark-font-color: black;
+$selected-font-color: white;
+$light-bg-color: rgb(227, 239, 255);
+$dark-bg-color:  rgb(191, 219, 255);
+$light-border-color:rgb(223, 232, 243);
+$dark-border-color: rgb(118, 161, 218);
+$selected-bg-color: rgb(3, 111, 219);
+$selected-border-color: rgb(3, 81, 189);
+$tab-border-size: 3px;
+$menu-border-size: 2px;
+$disabled-bg-color: rgb(64, 64, 128);
+$disabled-font-color: rgb(123, 132, 243);
+
+$success-font-color: white;
+$success-bg-color: rgb(34, 177, 76);
+$success-border-color: darken($success-bg-color, 20%);
+
+$info-font-color: white;
+$info-bg-color: rgb(6, 155, 204);
+$info-border-color: darken($info-bg-color, 20%);
+
+$warning-font-color: white;
+$warning-bg-color: rgb(255, 127, 39);
+$warning-border-color: darken($warning-bg-color, 20%);
+
+$danger-bg-color: rgb(200, 50, 50);
+$danger-font-color: white;
+$danger-border-color: darken($danger-bg-color, 20%);
+
+
+
+$shadow-color: rgba(0, 0, 0, 0.5);

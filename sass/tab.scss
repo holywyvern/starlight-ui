@@ -1,0 +1,74 @@
+
+.tab-container {
+  
+  &>.header {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    margin-bottom: -1px;
+    height: 2.25em;
+    
+    &>li {
+      float: left;
+      list-style: none;
+      margin: 0;
+      padding: .25em .25em 0;
+      height: 2em;
+      overflow: hidden;
+      position: relative;
+      z-index: 1;
+      border-bottom: 1px solid $light-bg-color;      
+      
+      &>a {
+        float: left;
+        height: 2em;
+        line-height: 2em;
+        background: $dark-bg-color; 
+        border: 1px solid $dark-border-color;
+        border-bottom: 0;
+        padding: 0 10px;
+        color: $dark-font-color;
+        text-decoration: none;      
+      }      
+      
+      &.active {
+        z-index: 3;
+        
+        &>a, &>a:hover {
+          cursor: default;
+          color: $light-font-color;
+          background: $light-bg-color; 
+          box-shadow: $shadow-color 0 0 .25em;          
+        } 
+        
+      }
+      
+      &>a:hover {
+        background: linear-gradient($dark-bg-color, darken($dark-bg-color, 3%));      
+      }
+      
+    }
+    
+  }
+  
+  &>.body {
+      clear: left;
+      position: relative;
+      z-index: 2;
+      padding: 2em 1em;
+      border: 1px solid $dark-border-color;
+      background: linear-gradient($light-bg-color, darken($light-bg-color, 3%)); 
+      box-shadow: $shadow-color 0 0 .25em;
+      margin: 0 .25em;
+      
+      &>* {
+        display: none;
+      }
+      &>.active {
+       display: block;
+      }
+      
+      
+    }
+  
+}

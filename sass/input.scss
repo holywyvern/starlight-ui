@@ -1,0 +1,123 @@
+.checkbox, .radio {
+  display: block;
+  box-sizing: border-box;
+  padding: 5px 10px;
+  white-space: nowrap;  
+  
+  
+  label {
+    display: inline-block;
+    cursor: pointer;
+    position: relative;
+    padding-left: 25px;
+    margin-right: 15px;    
+    
+    &:before {
+      content: "";
+      display: inline-block;
+  
+      width: 16px;
+      height: 16px;
+  
+      margin-right: 10px;
+      position: absolute;
+      left: 0;
+      bottom: 1px;
+      background-color: $dark-bg-color;
+      box-shadow: inset 0px 2px 3px 0px rgba(0, 0, 0, .3), 0px 1px 0px 0px rgba(255, 255, 255, .8);
+    }
+    
+  }  
+  
+  input[type=radio], input[type=checkbox]  {
+    display: none;
+  }
+  
+  input[type=radio]  + label:before, input[type=checkbox] + label:before {
+    font-family: initial;
+    color: $selected-bg-color;
+    text-align: center;    
+  }
+  
+  input[type=radio]:checked + label:before {  
+      content: "\2022";
+      font-size: 30px;
+      line-height: 18px;
+  }  
+  
+  input[type=checkbox]:checked + label:before {
+      content: "\2713";
+      text-shadow: 1px 1px 1px rgba(0, 0, 0, .2);
+      font-size: 15px;
+      line-height: 15px;
+  }  
+  
+  input:disabled + label:before  {
+    background-color: $disabled-bg-color;
+    color: $disabled-font-color;
+  }
+  
+}
+
+.radio {
+  
+  label:before {
+    border-radius: 8px;
+  }
+  
+}
+
+input, textarea {
+  padding: 5px;
+  border: 2px solid $light-border-color;
+  background: linear-gradient($light-bg-color, lighten($light-bg-color, 20%));
+  box-shadow: inset 0 0 5px $shadow-color;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus {
+  outline: 0;
+  border-color: $selected-border-color;
+}
+
+input[type=date]::-webkit-clear-button,
+input[type=date]::-webkit-inner-spin-button {
+    display: none;
+}
+
+input[type=range] {
+  border-width: 0;
+  box-shadow: none;
+  -webkit-appearance: none;
+  background: transparent;
+}
+
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: 1px solid $dark-border-color;
+    height: 1em;
+    width: 16px;
+    border-radius: 3px;
+    background: $dark-bg-color;
+    cursor: pointer;
+    margin-top: -0.2em;
+    box-shadow: 1px 1px 1px $shadow-color,0 0 1px $shadow-color;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 1px 1px 1px $shadow-color, 0px 0px 1px $shadow-color;
+  background: darken($light-bg-color, 20%);
+  border-radius: 1.3px;
+  border: 0.2px solid $light-border-color;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: darken($light-bg-color, 10%);
+}

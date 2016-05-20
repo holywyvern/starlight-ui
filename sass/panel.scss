@@ -1,0 +1,44 @@
+.panel {
+      
+      clear: left;
+      position: relative;
+      padding: 2em 1em;
+      border: 1px solid $dark-border-color;
+      border-radius: 5px;
+      background: linear-gradient($dark-bg-color, darken($dark-bg-color, 3%)); 
+      box-shadow: $shadow-color 0 0 .25em;
+      color: $dark-font-color;
+      margin: 15px 0;
+      
+      &>* {
+        display: none;
+      }
+      &>.active {
+       display: block;
+      }
+      
+      &.success {
+        background: linear-gradient($success-bg-color, darken($success-bg-color, 3%)); 
+        color: $success-font-color;
+        border-color: $success-border-color;
+      }
+      
+      &.info {
+        background: linear-gradient($info-bg-color, darken($info-bg-color, 3%)); 
+        color: $info-font-color;
+        border-color: $info-border-color;
+      }
+      
+      &.warning {
+        background: linear-gradient($warning-bg-color, darken($warning-bg-color, 3%));
+        color: $warning-font-color;
+        border-color: $warning-border-color;
+      }
+      
+      &.danger {
+        background: linear-gradient($danger-bg-color, darken($danger-bg-color, 3%));
+        color: $danger-font-color;
+        border-color: $danger-border-color;
+      }
+      
+}

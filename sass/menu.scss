@@ -1,0 +1,94 @@
+.menu {
+  & ul {
+    
+    &:before, &:after {
+      @include clearfix();
+    }
+    
+    list-style: none;
+    padding: 0;
+    margin: 0;  
+    li {
+      display: block;
+      position: relative;
+      float: left;   
+      a {        
+        display: block;
+        padding: 5px 10px;
+        text-decoration: none;
+        white-space: nowrap;        
+      }
+      
+      &>a>.caret {
+        box-sizing: border-box;
+        white-space: nowrap;  
+        margin-left: -2px;     
+        margin-top: -2px;   
+        @include arrow-down(5px, $light-font-color, 1);
+      }
+      
+      &:hover>a>.caret {
+        @include arrow-down(5px, $selected-font-color, 1);
+      }      
+      
+      &>.divider {
+        border-left: 2px solid $dark-border-color;
+        display:block;
+        min-width: 1px;
+        width: 1px;
+        height: calc(1em + 10px);
+        min-height: 90%;
+        max-height: 90%;
+        margin: auto 5px;
+      }
+      
+      &:hover>a,
+      &:focus>a {
+        background: linear-gradient($selected-bg-color, darken($selected-bg-color, 10%));
+        color: $selected-font-color;
+      }
+      
+      ul { 
+        display: none; 
+        box-shadow: 0 8px 8px $shadow-color;
+        background: $light-bg-color;
+        border: $menu-border-size solid $dark-border-color;    
+        z-index: 999;    
+        ul {
+          left: 100%;
+          top: 0;
+        }
+        .divider {
+           display: block;
+           width: 90%;
+           height: 1px;
+           min-height: 1px;
+           margin: auto 5px;
+           border-top: 2px solid $dark-border-color;
+           max-width: 90%;
+        } 
+        
+        li>a>.caret {
+          @include arrow-right(5px, $light-font-color, 1);
+        }
+        
+        li:hover>a>.caret {
+          @include arrow-right(5px, $selected-font-color, 1);
+        }          
+        
+      }   
+      &:hover > ul,
+      &:focus > ul {
+        border-radius: 4px;
+        display: block;
+        position: absolute;
+        li { border-top: 0; }
+      }      
+      &:hover li, &:focus li { float: none; }
+
+    }
+
+
+  } 
+
+}

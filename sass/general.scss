@@ -1,0 +1,51 @@
+html, body {
+  background: linear-gradient($light-bg-color, darken($light-bg-color, 1%));
+  color: $light-font-color;
+  font-family: 'Ubuntu Mono', monospace;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+hr {
+  border-color: $dark-border-color;
+  border-width: 1px;
+  border-style: solid;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: darken($light-font-color, 20%);
+}
+
+h1>small, h2>small, h3>small, h4>small, h5>small {
+  color: transparentize($light-font-color, 0.1);
+}
+
+p {
+  line-height: calc(1em + 8px);
+}
+
+kbd {
+  
+  kbd {
+    padding: 0;
+  }
+  padding: 2px 5px;
+  border-radius: 3px;
+  color: white;
+  background: black;
+}
+
+code {
+  padding: 2px;
+  color: black;
+  background: #eee;
+  border: 1px dashed gray;
+}
+
+pre > code {
+  padding: 15px;
+  display: block;
+}
+

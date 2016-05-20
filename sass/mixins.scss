@@ -1,0 +1,48 @@
+@mixin clearfix() {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0;  
+}
+
+@mixin arrow-up($size, $color, $ratio: 2) {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-left: $size / $ratio solid transparent;
+  border-right: $size / $ratio  solid transparent;
+  
+  border-bottom: $size solid $color;
+}
+
+@mixin arrow-down($size, $color, $ratio: 2) {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-left: $size / $ratio  solid transparent;
+  border-right: $size / $ratio  solid transparent;
+  
+  border-top: $size solid $color;
+}
+
+@mixin arrow-right($size, $color, $ratio: 2) {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-top: $size / $ratio  solid transparent;
+  border-bottom: $size / $ratio  solid transparent;
+  
+  border-left: $size solid $color;
+}
+
+@mixin arrow-left($size, $color, $ratio: 2) {
+  display: inline-block;
+  width: 0; 
+  height: 0; 
+  border-top: $size / $ratio solid transparent;
+  border-bottom: $size / $ratio solid transparent; 
+  
+  border-right: $size solid $color; 
+}
