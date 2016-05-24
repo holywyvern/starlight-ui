@@ -17,6 +17,7 @@ form {
     }    
     
     &>.control, &>.radio, &>.checkbox {
+      min-width: 180px;
       vertical-align: top;
       display: table-cell;
       padding-left: 10px;
