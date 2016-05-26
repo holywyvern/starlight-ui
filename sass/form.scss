@@ -10,6 +10,7 @@ form {
     vertical-align: top;
         
     &>label {
+      padding-right: 5px;
       vertical-align: top;
 		  display: table-cell;
       line-height: calc(1em + 10px);

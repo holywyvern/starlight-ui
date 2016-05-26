@@ -49,3 +49,6 @@ pre > code {
   display: block;
 }
 
+input, label, textarea, select {
+  box-sizing: border-box;
+}
