@@ -27,7 +27,8 @@
         border-bottom: 0;
         padding: 0 10px;
         color: $dark-font-color;
-        text-decoration: none;      
+        text-decoration: none;    
+        margin-top: 5px;  
       }      
       
       &.active {
@@ -37,13 +38,19 @@
           cursor: default;
           color: $light-font-color;
           background: $light-bg-color; 
-          box-shadow: $shadow-color 0 0 .25em;          
+          box-shadow: $shadow-color 0 0 .25em;     
+          margin-top: 0;     
         } 
         
       }
       
       &>a:hover {
         background: linear-gradient($dark-bg-color, darken($dark-bg-color, 3%));      
+      }
+      
+      &>a.disabled, &>a.disabled:hover {
+        background: linear-gradient($disabled-bg-color, darken($disabled-bg-color, 3%));     
+        color: $disabled-font-color; 
       }
       
     }
