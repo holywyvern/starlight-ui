@@ -137,3 +137,9 @@ option {
   font: $light-font-color;
   border: 2px solid $light-border-color;
 }
+
+input:disabled, textarea:disabled, select:disabled {
+  border-color: $disabled-border-color;
+  background: linear-gradient($disabled-bg-color, lighten($disabled-bg-color, 20%));
+  color: $disabled-font-color;
+}
