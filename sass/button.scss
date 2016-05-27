@@ -75,6 +75,13 @@
     }    
   }
   
+  &.disabled, &.disabled:hover, &.disabled:focus {
+    background: linear-gradient($disabled-bg-color, darken($disabled-bg-color, 10%));
+    color: $disabled-font-color;
+    border-color: $disabled-border-color;
+    cursor: not-allowed;
+  }
+  
 }
 
 .button-group {
