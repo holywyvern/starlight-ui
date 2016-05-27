@@ -54,6 +54,9 @@
   input:disabled + label:before  {
     background-color: $disabled-bg-color;
     color: $disabled-font-color;
+  }
+  
+  input:disabled + label:hover {
     cursor: not-allowed;
   }
   

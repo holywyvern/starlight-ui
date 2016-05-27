@@ -48,7 +48,7 @@
         background: linear-gradient($dark-bg-color, darken($dark-bg-color, 3%));      
       }
       
-      &>a.disabled, &>a.disabled:hover {
+      &.disabled>a, &.disabled>a:hover {
         background: linear-gradient($disabled-bg-color, darken($disabled-bg-color, 3%));     
         color: $disabled-font-color; 
         cursor: not-allowed;
