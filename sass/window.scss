@@ -85,7 +85,7 @@
     
 
     
-    &>* {
+    &>*:not(.top), button, a, input, select, textarea {
       -webkit-user-select: initial;
       -webkit-app-region: no-drag;
     }
