@@ -12,6 +12,7 @@
       display: block;
       position: relative;
       float: left;   
+      
       a {        
         display: block;
         padding: 5px 10px;
@@ -86,6 +87,20 @@
       }      
       &:hover li, &:focus li { float: none; }
 
+      &.disabled {
+        a {
+          color: $disabled-font-color;
+          cursor: not-allowed;
+          background: transparent;
+          &>.caret {
+            display: none;
+          }
+        }
+        ul {
+          display: none;
+        }
+      }   
+      
     }
 
 
