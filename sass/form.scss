@@ -22,8 +22,28 @@ form {
       vertical-align: top;
       display: table-cell;
       padding-left: 10px;
-      &>input:not([type='radio']):not([type='checkbox']), &>textarea {
+      &>input:not([type='radio']):not([type='checkbox']), &>textarea, &>select {
         width: 100%;
+      }
+      
+      &.with-button {
+        display: table;
+        &>input, &>select, &>textarea {
+          width: initial !important;
+          display: table-cell;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-color: $dark-border-color;
+          &:focus {
+            border-color: $selected-border-color;
+          }
+        }
+        &>button {
+          padding: 5px 10px;
+          display: table-cell;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
       }
       
     }
