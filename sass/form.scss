@@ -4,6 +4,9 @@ form {
   border-collapse: separate;
   border-spacing: 2px;
   max-width: 100%;
+  &.full-width {
+    width: 100%;
+  }
   
   &>.group {
     display: table-row;
@@ -27,10 +30,13 @@ form {
       }
       
       &.with-button {
-        display: table;
+        display: flex;
+        margin-left: 2px;
+        margin-right: 2px;
         &>input, &>select, &>textarea {
           width: initial !important;
           display: table-cell;
+          flex: 1;
           border-top-right-radius: 0;
           border-bottom-right-radius: 0;
           border-color: $dark-border-color;
