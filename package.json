@@ -1,5 +1,6 @@
 {
   "name": "starlight-ui",
+  "version": "1.7.0",
   "description": "An ui for webkit components in html5",
   "main": "index.js",
   "scripts": {
