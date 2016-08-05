@@ -1,6 +1,6 @@
 dialog {
   background: linear-gradient($light-bg-color, darken($light-bg-color, 3%));
-  width: 300px;
+  min-width: 300px;
   text-align: center;
   padding: 0;
   margin: 1em auto;

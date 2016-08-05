@@ -4,6 +4,9 @@ form {
   border-collapse: separate;
   border-spacing: 2px;
   max-width: 100%;
+  &.full-width {
+    width: 100%;
+  }
   
   &>.group {
     display: table-row;
@@ -22,8 +25,31 @@ form {
       vertical-align: top;
       display: table-cell;
       padding-left: 10px;
-      &>input:not([type='radio']):not([type='checkbox']), &>textarea {
+      &>input:not([type='radio']):not([type='checkbox']), &>textarea, &>select {
         width: 100%;
+      }
+      
+      &.with-button {
+        display: flex;
+        margin-left: 2px;
+        margin-right: 2px;
+        &>input, &>select, &>textarea {
+          width: initial !important;
+          display: table-cell;
+          flex: 1;
+          border-top-right-radius: 0;
+          border-bottom-right-radius: 0;
+          border-color: $dark-border-color;
+          &:focus {
+            border-color: $selected-border-color;
+          }
+        }
+        &>button {
+          padding: 5px 10px;
+          display: table-cell;
+          border-top-left-radius: 0;
+          border-bottom-left-radius: 0;
+        }
       }
       
     }
