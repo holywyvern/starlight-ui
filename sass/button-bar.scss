@@ -1,0 +1,59 @@
+.window>.content.has-sidebar {
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.button-sidebar {
+    display: flex;
+    height: 100%;
+    & > .sidebar {
+        text-align: center;
+        background: linear-gradient($dark-bg-color, darken($dark-bg-color, 2%));
+        border-right: 3px solid $dark-border-color;
+        padding: 16px 16px;
+        overflow-y: scroll;
+        width: 32px;
+        flex: 0 1 32px;
+        &::-webkit-scrollbar {
+            width: 0px;
+            background: transparent;  /* optional: just make scrollbar invisible */
+        }
+        &::-webkit-scrollbar-thumb {
+            background: transparent;
+        }
+        .button, button {
+            display: block;
+            outline: 0;
+            background: transparent;
+            color: $light-font-color;
+            font-size: 32px;
+            border: none;
+            margin: 10px auto;
+
+            width: 32px;
+            padding: 0;    
+            &.active, &:hover {
+                color: $light-bg-color;
+                cursor: pointer;                
+            }        
+        }
+        .button:focus, button:focus, .button:active, button:active
+        {
+            box-shadow: none;
+        }
+
+        :first-child {
+            margin-top: 0;
+        }     
+        :last-child {
+            margin-bottom: 0;
+        }         
+    }
+    & > .contents {
+        flex: 1 1 70%;
+        overflow-y: auto;
+        overflow-x: hidden; 
+        padding: 5px;       
+    }
+}  
